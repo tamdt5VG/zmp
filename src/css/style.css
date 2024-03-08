@@ -1,0 +1,10 @@
+.imageProd{
+    border-radius: 20px;
+}
+.container{
+    display:table-cell
+}
+
+.container .text{
+    display:block;
+}
