@@ -1,0 +1,45 @@
+import React , { useEffect, useState }from 'react';
+import {
+  Page, BottomNavigation, useNavigate , Button, Box, Text
+} from 'zmp-ui';
+import '../../css/carousel-product-cart.css'
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Card from 'react-bootstrap/Card';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+
+const ProductCard = () => {
+  const [menu,setMenu] = useState('flashsale1');
+
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 2
+    }
+  };
+
+  return (
+    <div className="card">
+        <img src="https://www.seahouseimagery.com/cdn/shop/products/WM_Stock_Photo_Coffee_IMG_6539_15x15_inch_1080x.jpg?v=1574920095" className='product-card-image' />
+        <h2>Sport</h2>
+        <p className="price">$20.99</p>
+    </div>
+  );
+}
+
+export default ProductCard;
