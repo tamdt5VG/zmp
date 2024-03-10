@@ -11,6 +11,7 @@ import Card from 'react-bootstrap/Card';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import ProductCard from './productCard';
+const RMCarousel = Carousel.default? Carousel.default: Carousel;
 
 const Navbar = () => {
   const [menu,setMenu] = useState('flashsale1');
@@ -34,20 +35,13 @@ const Navbar = () => {
       items: 2
     }
   };
-  const renderer = ({ hours, minutes, seconds, completed }) => {
-    if (completed) {
-      // Render a completed state
-    } else {
-      // Render a countdown
-      return <span>{hours}:{minutes}:{seconds}</span>;
-    }
-  };
 
   return (
     <Container fluid>
       <Row>
           <h2 style={{textAlign:'center'}}>Mặc Ngay, Yêu Luôn</h2>
       </Row>
+
       <Row>
         <ul className='headerAttention'>
           <li onClick={()=>{setMenu("flashsale1")}}>Flashsale {menu==='flashsale1' ?<hr/> : <></>}</li>
@@ -56,13 +50,13 @@ const Navbar = () => {
         </ul>
       </Row>
       
-      <Carousel responsive={responsive}>
+      <RMCarousel responsive={responsive}>
         <ProductCard/>
         <ProductCard/>
         <ProductCard/>
         <ProductCard/>
         <ProductCard/>
-      </Carousel>
+      </RMCarousel>
       
     </Container>
   );
