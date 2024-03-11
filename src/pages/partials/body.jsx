@@ -2,8 +2,6 @@ import React , { useEffect, useState }from 'react';
 import {
   Page, BottomNavigation, useNavigate , Button, Box, Text
 } from 'zmp-ui';
-import '../../css/navbar.css'
-import '../../css/countdown.css'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -20,16 +18,35 @@ const Navbar = () => {
                 <img src="https://tec-ftu.com/wp-content/uploads/2021/07/1.jpg" alt="" style={{borderRadius:'40px'}} />
             </Row>
         </div>
-        <div style={{marginTop:'20px'}}>
-            <Row>
-                <img src="https://media.coolmate.me/image/June2022/mceclip0_79.png" alt="" style={{borderRadius:'40px'}} />
+        <div style={{marginTop:'20px',
+      height:'max-content'}}>
+            <Row style={{
+                backgroundImage:'url(https://r.ipsearch.vn/trademarks/2022/4202238661.jpg)',
+                backgroundPosition: '70%',
+                backgroundSize: '100%',
+                backgroundRepeat:'no-repeat',
+                marginBottom:'50px'
+            }} >
+              <div >
+                <img src="https://freecutout.com/wp-content/uploads/2015/03/free_cutpeople_28.png" alt="" style={{
+                  position:'relative',
+                  left:'100px',
+                  width:'20vh',
+                }}/>
+                <Button style={{
+                  position:'relative',
+                  right:'40px',
+                  top:'110px'
+                }}>KHÁM PHÁ</Button>
+              </div>
+             
             </Row>
         </div>
             <Row  style={
             {
                 backgroundImage:'linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(https://static.toiimg.com/photo/msid-81554562,width-96,height-65.cms)',
-                backgroundAttachment: 'fixed',
                 backgroundPosition: '70%',
+                backgroundAttachment: 'fixed',
                 borderRadius: '50px'}
             }>
                 <Col>
@@ -46,8 +63,8 @@ const Navbar = () => {
                   <Button variant='light'>Tìm hiểu thêm</Button>
                 </Col>
             </Row>
-            <Row style={{padding:'30px'}}>
-              <Col xs={8} style={{
+            <Row style={{marginTop:'20px'}}>
+              <Col xs={7} style={{
                 background:'yellow',
                 borderRadius:'50px',
                 padding:'30px'
@@ -56,7 +73,7 @@ const Navbar = () => {
                 <p>Công nghệ Việt cho người Việt</p>
                 <Button> Tìm hiểu thêm </Button>
               </Col>
-              <Col xs={4}
+              <Col xs={5} 
                 style={{
                   background:'white',
                   borderRadius:'50px',
@@ -66,12 +83,11 @@ const Navbar = () => {
               >
                 <img src="https://i.pinimg.com/originals/f7/1c/5c/f71c5c1e89dbb27a7e840b6fb60932eb.png"
                     alt="" 
+                    width={'250px'}
+                    height={'270px'}
                     style={{
-                      width:'130%',
-                      height:'100%',
                       position:'relative',
-                      left:'10px',
-                      bottom:'30px',
+                      right:'30px',
                       transform:'rotate(5deg)',
                     }}/>
               </Col>
