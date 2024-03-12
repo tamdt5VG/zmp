@@ -1,15 +1,12 @@
-import React , { useEffect, useState }from 'react';
-import {
-  Page, BottomNavigation, useNavigate , Button, Box, Text
-} from 'zmp-ui';
+import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
+import CategoryCard from './categoryCard'
 import 'react-multi-carousel/lib/styles.css';
-import ProductCard from './productCard';
 
-const Navbar = () => {
+const Body = () => {
 
   return (
     <Container fluid>
@@ -33,10 +30,10 @@ const Navbar = () => {
                   left:'100px',
                   width:'20vh',
                 }}/>
-                <Button style={{
+                <Button variant='light' style={{
                   position:'relative',
                   right:'40px',
-                  top:'110px'
+                  top:'110px',
                 }}>KHÁM PHÁ</Button>
               </div>
              
@@ -71,7 +68,7 @@ const Navbar = () => {
               }}>
                 <h2>Dòng sản phẩm công nghệ EXCOOL</h2>
                 <p>Công nghệ Việt cho người Việt</p>
-                <Button> Tìm hiểu thêm </Button>
+                <Button variant='light'> Tìm hiểu thêm </Button>
               </Col>
               <Col xs={5} 
                 style={{
@@ -91,10 +88,143 @@ const Navbar = () => {
                       transform:'rotate(5deg)',
                     }}/>
               </Col>
+            </Row>
+            <Row>
+              <Col xs={6}>
+                <CategoryCard></CategoryCard>
+              </Col>
+              <Col xs={6}>
+                <CategoryCard></CategoryCard>
+              </Col>
+              <Col xs={6}>
+                <CategoryCard></CategoryCard>
+              </Col>
+              <Col xs={6}>
+                <CategoryCard></CategoryCard>
+              </Col>
+            </Row>
+            <Row  style={{
+                marginTop:'10px',
+                marginLeft:'0.5vw',
+                marginRight:'0.5vw',
+                position:'relative',
+              }}>
+              <Col xs={7}  style={
+              {
+                  backgroundImage:'linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(https://style-republik.com/wp-content/uploads/2022/11/POSTER-COMING-SOON-BEHIND-THE-LABEL.png)',
+                  backgroundPosition: '70%',
+                  backgroundSize: 'cover',
+                  borderRadius: '30px'}
+              }>
+               
+              </Col>
+              <Col xs={5} style={{
+                right:'20px',
+                background:'yellow',
+                borderRadius:'30px',
+                zIndex:'-1',
+                fontSize:'13px',
+                padding:'20px'
+              }}>
                 
+                <div style={{
+                  width:'90%',
+                  float:'right'
+                }}>
+                      <b>Trải nghiệm mua sắm hài lòng với #Coolmate</b>
+                      <div style={{
+                        margin:'2vh 0'
+                      }}>
+                        <p style={{margin:'0'}}>Giá cả hợp lý</p>
+                        <p style={{margin:'0'}}>Dịch vụ 100% hài lòng</p>
+                        <p style={{margin:'0'}}>60 ngày đổi trả</p>
+                        <p style={{margin:'0'}}>Tự hào sản xuất tại Việt Nam</p>
+                      </div>
+                      
+                      <Button variant='light' style={{
+                        borderRadius:'30px',
+                        width:'max-content',
+                        fontSize:'10px'
+                      }}>Tìm hiểu thêm</Button>
+                </div>
+              </Col>
+              <Row style={{
+                position:'absolute',
+                height:'100%',
+                width:'50%',
+                zIndex:'-2',
+                background:'yellow',
+                left:'45vw',
+                borderRadius:'30px'
+              }}>
+              </Row>
+            </Row>
+            <Row style={{
+              marginTop:'10px',
+              position:'relative',
+              borderRadius:'50px',
+              background:'black',
+              height:'5vh'
+            }}>
+                <marquee style={{
+                  width:'70%',
+                  color:'white',
+                  padding:'1%'
+                }} behavior="" direction="">
+                  <div style={{
+                    marginTop:'5px'
+                  }}>
+                    <b>CoolClub</b>- Ưu đãi <b>nhiều hơn</b>, mua sắm vui hơn. Nhận ngay <b>ưu đãi 7%</b> cho lần mua sắm tiếp theo
+                  </div>
+                  </marquee>
+                <Button style={{
+                  position:'absolute',
+                  width:'30%',
+                  right:'0vw',
+                  height:'5vh',
+                  borderRadius:'30px',
+                  fontSize:'13px'
+                }}> Gia nhập ngay </Button>
+            </Row>
+            <Row style={{
+              position:'relative',
+              height:'150px',
+              marginTop:'10px',
+              backgroundSize: 'cover',
+              backgroundPosition:'80% 50%',
+              borderRadius:'30px',
+              backgroundImage:'url(https://photo2.tinhte.vn/data/attachment-files/2021/05/5467613_cover_coolmate.jpg)',
+            }}>
+                <Button variant='dark' style={{
+                position:'absolute',
+                top:'7.5vh',
+                borderRadius:'30px',
+                left:'25vw',
+                backgroundColor: 'rgba(0,0,0,0.5)',  
+                width:'max-content'
+              }}>Câu chuyện Coolmate</Button> 
+            </Row>
+            <Row style={{
+             position:'relative',
+             height:'150px',
+             marginTop:'10px',
+             backgroundSize: 'cover',
+             backgroundPosition:'80% 20%',
+             borderRadius:'30px',
+             backgroundImage:'url(https://mcdn.coolmate.me/image/October2022/van-phong-cu-don-so-coolmate-ha-noi.jpg)',
+            }}>
+            
+              <Button variant='dark' style={{
+                position:'absolute',
+                top:'7.5vh',
+                borderRadius:'30px',
+                left:'25vw',
+                backgroundColor: 'rgba(0,0,0,0.5)',  
+                width:'max-content'
+              }}>Dịch vụ hài lòng 100%</Button>
             </Row>
     </Container>
   );
 }
 
-export default Navbar;
+export default Body;

@@ -6,6 +6,7 @@ import HomePage from '../pages';
 import DetailPage from '../pages/detail';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
+import BottomNavigationPage from '../pages/partials/bottomNavigation';
 
 
 const MyApp = () => {
@@ -17,7 +18,9 @@ const MyApp = () => {
         <ZMPRouter>
           <AnimationRoutes>
             <Route path="/" element={<HomePage></HomePage>}></Route>
+            <Route path="/hehe" element={<HomePage></HomePage>}></Route>
           </AnimationRoutes>
+          <BottomNavigationPage></BottomNavigationPage>
         </ZMPRouter>
       </SnackbarProvider>
       </App>

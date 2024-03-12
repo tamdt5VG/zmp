@@ -1,20 +1,15 @@
 import React , { useEffect, useState }from 'react';
-import {
-  Page, BottomNavigation, useNavigate , Button, Box, Text
-} from 'zmp-ui';
 import '../../css/navbar.css'
 import '../../css/countdown.css'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Card from 'react-bootstrap/Card';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import ProductCard from './productCard';
 const RMCarousel = Carousel.default? Carousel.default: Carousel;
 
 const Navbar = () => {
-  const [menu,setMenu] = useState('flashsale1');
+  const [menu,setMenu] = useState('flashsale');
 
   const responsive = {
     superLargeDesktop: {
@@ -37,16 +32,21 @@ const Navbar = () => {
   };
 
   return (
-    <Container fluid>
+    <Container fluid="xs">
+      <marquee behavior="" direction="" scrollamount="5" style={{
+        background:'yellow'
+      }}>
+        <b>5 năm đồng hành, chân thành cùng bạn</b>
+      </marquee>
       <Row>
           <h2 style={{textAlign:'center'}}>Mặc Ngay, Yêu Luôn</h2>
       </Row>
 
       <Row>
         <ul className='headerAttention'>
-          <li onClick={()=>{setMenu("flashsale1")}}>Flashsale {menu==='flashsale1' ?<hr/> : <></>}</li>
-          <li onClick={()=>{setMenu("flashsale2")}}>Flashsale {menu==='flashsale2' ?<hr/> : <></>}</li>
-          <li onClick={()=>{setMenu("new")}}>Sản phẩm mới   {menu==='new' ?<hr/> : <></>}</li>
+          <li onClick={()=>{setMenu("flashsale")}}>Flashsale {menu==='flashsale' ?<hr/> : <></>}</li>
+          <li onClick={()=>{setMenu("new")}}>Sản phẩm mới {menu==='new' ?<hr/> : <></>}</li>
+          <li onClick={()=>{setMenu("eco")}}>Combo tiết kiệm   {menu==='eco' ?<hr/> : <></>}</li>
         </ul>
       </Row>
       

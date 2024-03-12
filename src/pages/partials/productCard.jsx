@@ -1,13 +1,5 @@
 import React , { useEffect, useState }from 'react';
-import {
-  Page, BottomNavigation, useNavigate , Button, Box, Text
-} from 'zmp-ui';
 import '../../css/carousel-product-cart.css'
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Card from 'react-bootstrap/Card';
-import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
 const ProductCard = () => {
@@ -36,8 +28,12 @@ const ProductCard = () => {
   return (
     <div className="card">
         <img src="https://www.seahouseimagery.com/cdn/shop/products/WM_Stock_Photo_Coffee_IMG_6539_15x15_inch_1080x.jpg?v=1574920095" className='product-card-image' />
-        <h2>Sport</h2>
-        <p className="price">$20.99</p>
+        <h2>Product</h2>
+        <p style={{
+          fontSize:'14px'
+        }}>100.000đ <strike>199.000đ</strike> <span style={{
+          color:'red'
+        }}> -100% </span> </p>
     </div>
   );
 }

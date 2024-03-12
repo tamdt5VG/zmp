@@ -2,8 +2,8 @@
   "app": {
     "title": "EC-Mini-App",
     "headerTitle": "EC-Mini-App",
-    "headerColor": "#1843EF",
-    "textColor": "white",
+    "headerColor": "yellow",
+    "textColor": "black",
     "statusBarColor": "#1843EF",
     "leftButton": "back",
     "statusBar": "normal",
