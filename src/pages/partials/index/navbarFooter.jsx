@@ -1,7 +1,7 @@
 import React , { useEffect, useState }from 'react';
-import '../../css/carousel-product-cart.css'
+import '../../../css/carousel-product-cart.css'
 import Button from 'react-bootstrap/Button';
-import '../../css/navbarfooter.css';
+import '../../../css/navbarfooter.css';
 import { Col, Container, Row } from 'react-bootstrap';
 
 const NavbarFooter = () => {

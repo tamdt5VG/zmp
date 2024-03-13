@@ -66,9 +66,12 @@ const Body = () => {
                 borderRadius:'50px',
                 padding:'30px'
               }}>
-                <h2>Dòng sản phẩm công nghệ EXCOOL</h2>
+                <h4>Dòng sản phẩm công nghệ EXCOOL</h4>
                 <p>Công nghệ Việt cho người Việt</p>
-                <Button variant='light'> Tìm hiểu thêm </Button>
+                <Button variant='light' style={{
+                  borderRadius:'30px',
+                  marginTop:'2vh'
+                }}> Tìm hiểu thêm </Button>
               </Col>
               <Col xs={5} 
                 style={{

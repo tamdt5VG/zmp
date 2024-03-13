@@ -1,6 +1,6 @@
 import React , { useEffect, useState }from 'react';
-import '../../css/navbar.css'
-import '../../css/countdown.css'
+import '../../../css/navbar.css'
+import '../../../css/countdown.css'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Carousel from 'react-multi-carousel';
@@ -33,11 +33,6 @@ const Navbar = () => {
 
   return (
     <Container fluid="xs">
-      <marquee behavior="" direction="" scrollamount="5" style={{
-        background:'yellow'
-      }}>
-        <b>5 năm đồng hành, chân thành cùng bạn</b>
-      </marquee>
       <Row>
           <h2 style={{textAlign:'center'}}>Mặc Ngay, Yêu Luôn</h2>
       </Row>

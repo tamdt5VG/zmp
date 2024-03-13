@@ -7,7 +7,8 @@ import DetailPage from '../pages/detail';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 import BottomNavigationPage from '../pages/partials/bottomNavigation';
-
+import MarQuee from '../pages/partials/marquee';
+import Cart from '../pages/cart';
 
 const MyApp = () => {
 
@@ -16,9 +17,10 @@ const MyApp = () => {
       <App >
       <SnackbarProvider>
         <ZMPRouter>
+          <MarQuee></MarQuee>
           <AnimationRoutes>
             <Route path="/" element={<HomePage></HomePage>}></Route>
-            <Route path="/hehe" element={<HomePage></HomePage>}></Route>
+            <Route path="/cart" element={<Cart></Cart>}></Route>
           </AnimationRoutes>
           <BottomNavigationPage></BottomNavigationPage>
         </ZMPRouter>

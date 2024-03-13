@@ -3,7 +3,7 @@ import { BottomNavigation, Icon, Page } from "zmp-ui";
 import { Container } from "react-bootstrap";
 
 const BottomNavigationPage = (props) => {
-  const [activeTab, setActiveTab] = useState("chat");
+  const [activeTab, setActiveTab] = useState("index");
   const { title } = props;
   return (
     <Container>
@@ -13,39 +13,39 @@ const BottomNavigationPage = (props) => {
         onChange={(key) => setActiveTab(key)}
       >
         <BottomNavigation.Item
-          key="chat"
-          label="Tin Nhắn"
-          linkTo="/"
-          icon={<Icon icon="zi-chat" />}
-          activeIcon={<Icon icon="zi-chat-solid" />}
-        />
-        <BottomNavigation.Item
-          label="Danh bạ"
-          key="contact"
-          linkTo="hehe"
-          icon={<Icon icon="zi-call" />}
-          activeIcon={<Icon icon="zi-call-solid" />}
-        />
-        <BottomNavigation.Item
+          key="discover"
           label="Khám phá"
-          key="discovery"
-          linkTo=""
+          linkTo="/"
           icon={<Icon icon="zi-more-grid" />}
-          activeIcon={<Icon icon="zi-more-grid-solid" />}
+          activeIcon={<Icon icon="zi-more-grid" />}
         />
         <BottomNavigation.Item
-          key="timeline"
-          label="Nhật ký"
+          label="Tìm kiếm"
+          key="search"
           linkTo="hehe"
-          icon={<Icon icon="zi-clock-1" />}
-          activeIcon={<Icon icon="zi-clock-1-solid" />}
+          icon={<Icon icon="zi-search" />}
+          activeIcon={<Icon icon="zi-search" />}
+        />
+        <BottomNavigation.Item
+          label="Trang chủ"
+          key="index"
+          linkTo="/"
+          icon={<Icon icon="zi-home" />}
+          activeIcon={<Icon icon="zi-home" />}
+        />
+        <BottomNavigation.Item
+          key="cart"
+          label="Giỏ hàng"
+          linkTo="/cart"
+          icon={<Icon icon="zi-calendar" />}
+          activeIcon={<Icon icon="zi-calendar" />}
         />
         <BottomNavigation.Item
           key="me"
           label="Cá nhân"
           linkTo="hehe"
           icon={<Icon icon="zi-user" />}
-          activeIcon={<Icon icon="zi-user-solid" />}
+          activeIcon={<Icon icon="zi-user" />}
         />
       </BottomNavigation>
     </Container>

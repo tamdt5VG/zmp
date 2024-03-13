@@ -1,5 +1,5 @@
 import React , { useEffect, useState }from 'react';
-import '../../css/carousel-product-cart.css'
+import '../../../css/carousel-product-cart.css'
 import Button from 'react-bootstrap/Button';
 
 const CategoryCard = () => {

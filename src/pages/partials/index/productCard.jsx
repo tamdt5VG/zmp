@@ -1,5 +1,5 @@
 import React , { useEffect, useState }from 'react';
-import '../../css/carousel-product-cart.css'
+import '../../../css/carousel-product-cart.css'
 import 'react-multi-carousel/lib/styles.css';
 
 const ProductCard = () => {
