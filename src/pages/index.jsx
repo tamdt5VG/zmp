@@ -1,8 +1,8 @@
 import React from 'react';
-import Navbar from './partials/index/navbar';
-import Body from './partials/index/body';
+import Navbar from './partials/components/navbar.jsx';
+import Body from './partials/components/body';
 import Container from 'react-bootstrap/Container';
-import Footer from './partials/index/footer'
+import Footer from './partials/components/footer'
 
 const HomePage = () => {
   return (
