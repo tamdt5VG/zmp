@@ -6,10 +6,13 @@ import Row from 'react-bootstrap/Row';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import ProductCard from './productCard';
+import { useAuth } from './login/AuthProvider';
+
 const RMCarousel = Carousel.default? Carousel.default: Carousel;
 
 const Navbar = () => {
   const [menu,setMenu] = useState('flashsale');
+  const auth = useAuth();
 
   const responsive = {
     superLargeDesktop: {
@@ -35,6 +38,9 @@ const Navbar = () => {
     <Container fluid="xs">
       <Row>
           <h2 style={{textAlign:'center'}}>Mặc Ngay, Yêu Luôn</h2>
+          <button onClick={() => auth.logOut()} className="btn-submit">
+          logout
+        </button>
       </Row>
 
       <Row>
