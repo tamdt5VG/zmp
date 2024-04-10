@@ -13,7 +13,7 @@ const AuthProvider = ({ children }) => {
   const navigate = useNavigate();
   const loginAction = async (data) => {
     try {
-      axios.post('https://e592-115-79-209-221.ngrok-free.app/api/zalo-mini-app/check-login', {
+      axios.post('https://864a-115-79-209-221.ngrok-free.app/api/zalo-mini-app/check-login', {
         headers:{
         'ngrok-skip-browser-warning': 'skip-browser-warning'
         },
